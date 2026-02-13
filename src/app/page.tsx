@@ -1,65 +1,92 @@
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import Image from "next/image";
+import { HeroShader } from "@/components/visuals/HeroShader";
+import { MoveRight } from "lucide-react";
+import React from "react";
+import Link from "next/link";
 
 export default function Home() {
+  const items = [
+    {
+      title: "KIN-NEXUS: ONLINE",
+      path: "/arena",
+      description: "24/7 Access. The Void is Open.",
+      header: (
+        <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden group/hero">
+             <Image 
+               src="/images/gaming-room.png" 
+               alt="Gaming Room" 
+               fill 
+               className="object-cover opacity-60 transition-transform duration-500 group-hover/hero:scale-105"
+             />
+             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
+                <span className="text-4xl md:text-6xl font-bold text-white tracking-tighter opacity-80 group-hover/hero:opacity-100 transition-opacity">KIN-NEXUS</span>
+                <span className="text-xs text-lime-cyber font-mono mt-2">SYSTEM.READY</span>
+             </div>
+        </div>
+      ),
+      className: "md:col-span-2 md:row-span-2 min-h-[20rem]",
+      icon: <div className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "Upcoming Tournaments",
+      path: "/tournaments",
+      description: "Valorant: Kinshasa Majors - 03/12",
+      header: (
+        <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden">
+             <Image 
+               src="/images/roller.png" 
+               alt="Upcoming Tournaments" 
+               fill 
+               className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
+             />
+        </div>
+      ),
+      className: "md:col-span-1",
+      icon: <div className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Arena",
+      path: "/arena",
+      description: "Explore the 3D Venue Twin",
+      header: <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 border border-cobalt-electric/20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lime-cyber/10 via-obsidian to-obsidian" />,
+      className: "md:col-span-1",
+      icon: <div className="h-4 w-4 text-neutral-500" />,
+    },
+     {
+      title: "Membership",
+      path: "/membership",
+      description: "Join the Corps.",
+      header: <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 border border-white/5 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-obsidian to-obsidian" />,
+      className: "md:col-span-1",
+      icon: <MoveRight className="h-4 w-4 text-neutral-500" />,
+    },
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-obsidian text-white relative overflow-hidden font-sans">
+      <div className="z-10 w-full max-w-5xl items-center justify-end font-mono text-sm flex mb-8">
+          <div className="text-xs text-lime-cyber animate-pulse border border-lime-cyber/30 px-2 py-1 rounded-full">SYSTEM: OPTIMAL</div>
+      </div>
+
+      <BentoGrid className="max-w-4xl mx-auto z-10 w-full mb-16">
+        {items.map((item, i) => (
+          <Link href={item.path} key={i} className={item.className}>
+             <BentoGridItem
+                title={item.title}
+                description={item.description}
+                header={item.header}
+                icon={item.icon}
+                className="h-full"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          </Link>
+        ))}
+      </BentoGrid>
+      
+       <div className="fixed inset-0 z-0 pointer-events-none opacity-20">
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-cobalt-electric blur-[120px]" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-lime-cyber blur-[120px]" />
+       </div>
+    </main>
   );
 }
