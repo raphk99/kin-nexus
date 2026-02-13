@@ -1,0 +1,4 @@
+1:"$Sreact.fragment"
+2:I[84742,["/kin-nexus/_next/static/chunks/57a1d7f12e401dda.js","/kin-nexus/_next/static/chunks/9abe6cb2d9259c37.js"],"default"]
+3:I[47619,["/kin-nexus/_next/static/chunks/57a1d7f12e401dda.js","/kin-nexus/_next/static/chunks/9abe6cb2d9259c37.js"],"default"]
+0:{"buildId":"LdWDm6p3s_45Ul81YBxze","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}

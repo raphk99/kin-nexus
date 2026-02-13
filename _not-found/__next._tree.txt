@@ -1,0 +1,2 @@
+:HL["/kin-nexus/_next/static/chunks/8fcb15c7cb756bd2.css","style"]
+0:{"buildId":"LdWDm6p3s_45Ul81YBxze","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
