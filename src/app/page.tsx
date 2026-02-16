@@ -14,7 +14,7 @@ export default function Home() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden group/hero">
              <Image 
-               src="/images/gaming-room.png" 
+               src="public/images/gaming-room.png" 
                alt="Gaming Room" 
                fill 
                className="object-cover opacity-60 transition-transform duration-500 group-hover/hero:scale-105"
@@ -35,7 +35,7 @@ export default function Home() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden">
              <Image 
-               src="/images/roller.png" 
+               src="/public/images/roller.png" 
                alt="Upcoming Tournaments" 
                fill 
                className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
@@ -49,7 +49,16 @@ export default function Home() {
       title: "The Arena",
       path: "/arena",
       description: "Explore the 3D Venue Twin",
-      header: <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 border border-cobalt-electric/20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-lime-cyber/10 via-obsidian to-obsidian" />,
+      header: (
+        <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden">
+             <Image 
+               src="/images/arena.jpeg" 
+               alt="The Arena" 
+               fill 
+               className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
+             />
+        </div>
+      ),
       className: "md:col-span-1",
       icon: <div className="h-4 w-4 text-neutral-500" />,
     },
@@ -57,7 +66,16 @@ export default function Home() {
       title: "Membership",
       path: "/membership",
       description: "Join the Corps.",
-      header: <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 border border-white/5 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/10 via-obsidian to-obsidian" />,
+      header: (
+        <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden">
+             <Image 
+               src="/images/corp.png" 
+               alt="Join the Corps" 
+               fill 
+               className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
+             />
+        </div>
+      ),
       className: "md:col-span-1",
       icon: <MoveRight className="h-4 w-4 text-neutral-500" />,
     },
