@@ -14,7 +14,7 @@ export default function Home() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden group/hero">
              <Image 
-               src="public/images/gaming-room.png" 
+               src="kin-nexus/images/gaming-room.png" 
                alt="Gaming Room" 
                fill 
                className="object-cover opacity-60 transition-transform duration-500 group-hover/hero:scale-105"
@@ -35,7 +35,7 @@ export default function Home() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden">
              <Image 
-               src="/public/images/roller.png" 
+               src="kin-nexus/images/roller.png" 
                alt="Upcoming Tournaments" 
                fill 
                className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
@@ -52,7 +52,7 @@ export default function Home() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden">
              <Image 
-               src="/images/arena.jpeg" 
+               src="kin-nexus/images/arena.jpeg" 
                alt="The Arena" 
                fill 
                className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
@@ -69,7 +69,7 @@ export default function Home() {
       header: (
         <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-neutral-900 relative overflow-hidden">
              <Image 
-               src="/images/corp.png" 
+               src="kin-nexus/images/corp.png" 
                alt="Join the Corps" 
                fill 
                className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
